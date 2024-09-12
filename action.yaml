@@ -1,0 +1,27 @@
+name: 'Redis Stack Server Cluster with Master Nodes'
+description: 'Setup Redis cluster with 3 master nodes in a single container'
+author: 'AryaveerJ'
+branding:
+  icon: 'database'
+  color: 'red'
+inputs:
+  master1-port:
+    description: 'Port number for master1'
+    required: false
+    default: "6379"
+  master2-port:
+    description: 'Port number for master2'
+    required: false
+    default: "6380"
+  master3-port:
+    description: 'Port number for master3'
+    required: false
+    default: "6381"
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.master1-port }}
+    - ${{ inputs.master2-port }}
+    - ${{ inputs.master3-port }}
