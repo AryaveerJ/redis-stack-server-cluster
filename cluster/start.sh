@@ -24,7 +24,7 @@ init_servers() {
 create_cluster() {
     init_servers
     echo "Sleeping :)"
-    sleep 30
+    sleep 5
     redis-cli --cluster create 127.0.0.1:$PORT1 127.0.0.1:$PORT2 127.0.0.1:$PORT3 --cluster-yes
     echo "Redis cluster created."
 }
