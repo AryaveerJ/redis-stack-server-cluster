@@ -14,4 +14,4 @@ docker run -d \
   -p ${MASTER2_PORT}:6380 \
   -p ${MASTER3_PORT}:6381 \
   --name redis-cluster \
-  aryaveerj/redis-stack-server-cluster:7.4.0.test.1
+  aryaveerj/redis-stack-server-cluster:1.0.0
